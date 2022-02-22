@@ -1,19 +1,29 @@
-public class Originator {
-    private String state;
+import java.util.ArrayList;
 
-    public void setState(String state) {
-        this.state = state;
+public class Originator {
+    private String cpu, gpu, ram, psu;
+    private ArrayList<String> components = new ArrayList<String>();
+
+    public void setState(String cpu, String gpu, String ram, String psu) {
+        this.cpu = cpu;
+        this.gpu = gpu;
+        this.ram = ram;
+        this.psu = psu;
     }
 
-    public String getState() {
-        return state;
+    public ArrayList<String> getState() {
+        components.add(cpu);
+        components.add(gpu);
+        components.add(ram);
+        components.add(psu);
+        return components;
     }
 
     public Memento saveStateToMemento() {
-        return new Memento(state);
+        return new Memento(cpu, gpu, ram, psu);
     }
 
     public void getStateFromMemento(Memento memento) {
-        state = memento.getState();
+        components = new ArrayList<>(memento.getState());
     }
 }

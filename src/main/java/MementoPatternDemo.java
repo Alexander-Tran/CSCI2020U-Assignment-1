@@ -1,6 +1,6 @@
 public class MementoPatternDemo {
     public static void main(String[] args) {
-
+        /*
         Originator originator = new Originator();
         CareTaker careTaker = new CareTaker();
 
@@ -17,6 +17,10 @@ public class MementoPatternDemo {
         originator.getStateFromMemento(careTaker.get(0));
         System.out.println("First saved State: " + originator.getState());
         originator.getStateFromMemento(careTaker.get(1));
-        System.out.println("Second saved State: " + originator.getState());
+        System.out.println("Second saved State: " + originator.getState());*/
+        String[] cpuList = {"Intel", "AMD"};
+        String[] gpuList = {"Nvidia", "AMD"};
+        String[] psuList = {"EVGA", "Corsair"};
+        String[] ramList = {"Corsair", "G.SKILL"};
     }
 }

@@ -1,11 +1,21 @@
-public class Memento {
-    private String state;
+import java.util.ArrayList;
 
-    public Memento(String state) {
-        this.state = state;
+public class Memento {
+    private String cpu, gpu, ram, psu;
+    private ArrayList<String> components = new ArrayList<String>();
+
+    public Memento(String cpu, String gpu, String ram, String psu) {
+        this.cpu = cpu;
+        this.gpu = gpu;
+        this.ram = ram;
+        this.psu = psu;
     }
 
-    public String getState() {
-        return state;
+    public ArrayList<String> getState(){
+        components.add(cpu);
+        components.add(gpu);
+        components.add(ram);
+        components.add(psu);
+        return components;
     }
 }
