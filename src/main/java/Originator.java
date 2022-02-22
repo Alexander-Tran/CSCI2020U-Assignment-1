@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Originator {
     private String cpu, gpu, ram, psu;
-    private ArrayList<String> components = new ArrayList<String>();
+    private ArrayList<String> components = new ArrayList<String>(4);
 
     public void setState(String cpu, String gpu, String ram, String psu) {
         this.cpu = cpu;
@@ -24,6 +24,6 @@ public class Originator {
     }
 
     public void getStateFromMemento(Memento memento) {
-        components = new ArrayList<>(memento.getState());
+        components = memento.getState();
     }
 }
