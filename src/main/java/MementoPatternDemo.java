@@ -1,11 +1,16 @@
+/**
+ * @author Nicholas Kissoon - 100742790, Alexander Tran - 100788359
+ */
+
 public class MementoPatternDemo {
     public static void main(String[] args) {
-
+        //PC Components
         String[] cpuList = {"Intel", "AMD"};
         String[] gpuList = {"Nvidia", "AMD"};
         String[] psuList = {"EVGA", "Corsair"};
         String[] ramList = {"Corsair", "G.SKILL"};
 
+        //Instantiate Originator and CareTaker objects
         Originator PCBuilderOriginator = new Originator();
         CareTaker PCBuilderCareTaker = new CareTaker();
 
